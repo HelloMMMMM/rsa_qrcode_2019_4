@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String RSA_PRIVATE_KEY = "RSAPrivateKey";
 
     //更换服务器ip地址
-    private final String ROOT_URL = "http://47.102.196.236/api/";
+    //private final String ROOT_URL = "http://47.102.196.236/api/";
 
-    private final String GET_KEYS = "getKeys";
+    //private final String GET_KEYS = "getKeys";
 
     private Handler handler;
     private LoadingDialogFragment loadingDialogFragment;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         checkPermission();
         //注释掉就是用本地生成的密钥，打开请求服务器统一密钥
-        requestKeys();
+        //requestKeys();
     }
 
     @Override
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void requestKeys() {
+    /*private void requestKeys() {
         OkGo.<KeyBean>post(ROOT_URL + GET_KEYS).execute(new AbsCallback<KeyBean>() {
             @Override
             public void onStart(Request<KeyBean, ? extends Request> request) {
@@ -170,5 +170,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }, 1000);
             }
         });
-    }
+    }*/
 }

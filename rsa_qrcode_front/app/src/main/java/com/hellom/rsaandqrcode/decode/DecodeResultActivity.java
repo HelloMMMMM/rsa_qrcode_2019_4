@@ -2,6 +2,7 @@ package com.hellom.rsaandqrcode.decode;
 
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.hellom.rsaandqrcode.LoadingDialogFragment;
 import com.hellom.rsaandqrcode.R;
 import com.hellom.rsaandqrcode.ToolBarActivity;
@@ -51,6 +52,8 @@ public class DecodeResultActivity extends ToolBarActivity {
         input.setText(inputString);
 
         hideLoading();
+
+        ToastUtils.showShort(KeyUtil.containerThisCode(inputString) ? "已找到该防伪码,真品" : "未找到该防伪码,伪劣产品");
     }
 
     @Override
